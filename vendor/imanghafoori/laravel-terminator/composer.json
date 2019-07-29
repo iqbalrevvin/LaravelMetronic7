@@ -1,0 +1,35 @@
+{
+  "name": "imanghafoori/laravel-terminator",
+  "description": "A minimal yet powerful package to give you opportunity to refactor your controllers.",
+  "keywords": ["laravel", "laravel5-package", "PHP", "laravel5"],
+  "license": "MIT",
+  "homepage": "https://github.com/imanghafoori1/laravel-terminator",
+  "authors": [
+    {
+      "name": "Iman Ghafoori",
+      "email": "Imanghafoori1@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.1.0",
+    "laravel/framework": "5.*"
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "ImanGhafoori\\Terminator\\Test\\": "tests"
+    }
+  },
+  "require-dev": {
+    "orchestra/testbench": "~3.0",
+    "mockery/mockery": "^0.9.9",
+    "imanghafoori/laravel-makesure": "^1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "ImanGhafoori\\Terminator\\": "src"
+    },
+    "files": [
+      "src/helpers.php"
+    ]
+  }
+}
