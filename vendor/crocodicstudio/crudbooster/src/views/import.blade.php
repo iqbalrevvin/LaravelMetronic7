@@ -80,8 +80,8 @@
 
             <div class="box-footer" id='upload-footer' style="display:none">
                 <div class='pull-right'>
-                    <a href='{{ CRUDBooster::mainpath("import-data") }}' class='btn btn-default'><i class='fa fa-upload'></i> Upload Other File</a>
-                    <a href='{{CRUDBooster::mainpath()}}' class='btn btn-success'>Finish</a>
+                    <a href='{{ CRUDBooster::mainpath("import-data") }}' class='btn btn-default nav_block'><i class='fa fa-upload'></i> Upload Other File</a>
+                    <a href='{{CRUDBooster::mainpath()}}' class='btn btn-success nav_block'>Finish</a>
                 </div>
             </div><!-- /.box-footer-->
 
@@ -200,14 +200,12 @@
                 <div class="box-footer">
                     <div class='pull-right'>
                         <a onclick="if(confirm('Are you sure want to leave ?')) location.href='{{ CRUDBooster::mainpath("import-data") }}'" href='javascript:;'
-                           class='btn btn-default'>Cancel</a>
-                        <input type='submit' class='btn btn-primary' name='submit' onclick='return check_selected_column()' value='Import Data'/>
+                           class='btn btn-default nav_block'>Cancel</a>
+                        <input type='submit' class='btn btn-primary nav_block' name='submit' onclick='return check_selected_column()' value='Import Data'/>
                     </div>
                 </div><!-- /.box-footer-->
             </form>
         </div><!-- /.box -->
-
-
     @endif
 
     @if(!Request::get('file'))
@@ -261,8 +259,8 @@
 
                 <div class="box-footer">
                     <div class='pull-right'>
-                        <a href='{{ CRUDBooster::mainpath() }}' class='btn btn-default'>Cancel</a>
-                        <input type='submit' class='btn btn-primary' name='submit' value='Upload'/>
+                        <a href='{{ CRUDBooster::mainpath() }}' class='btn btn-default nav_block'>Cancel</a>
+                        <input type='submit' class='btn btn-primary nav_block' name='submit' value='Upload'/>
                     </div>
                 </div><!-- /.box-footer-->
             </form>

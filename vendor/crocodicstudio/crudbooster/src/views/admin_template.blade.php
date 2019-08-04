@@ -28,7 +28,7 @@
         <meta name="theme-color" content="##00FFFF">
 
         <link rel="shortcut icon"
-          href="{{ CRUDBooster::getSetting('favicon')?asset(CRUDBooster::getSetting('favicon')):asset('vendor/crudbooster/assets/logo_crudbooster.png') }}">
+          href="{{ CRUDBooster::getSetting('favicon')?asset(CRUDBooster::getSetting('favicon')):asset('vendor/crudbooster/assets/logo_crudbooster.png') }} ">
         <!--begin::Fonts -->
         <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
         <script>
@@ -163,6 +163,31 @@
                         @include('crudbooster::layouts.partials._subheader')
                         <!-- end:: Subheader -->
                         <div class="kt-content kt-grid__item kt-grid__item--fluid" id="kt_content">
+                        @if(@$alerts)
+                            @foreach(@$alerts as $alert)
+                                <div class='callout callout-{{$alert["type"]}}'>
+                                    {!! $alert['message'] !!}
+                                </div>
+                            @endforeach
+                        @endif
+
+
+                        @if (Session::get('message')!='')
+                            <div class='alert alert-{{ Session::get("message_type") }} fade show' role="alert">
+                                <h4>
+                                    <i class="icon fa fa-info"></i> 
+                                    {{ trans("crudbooster.alert_".Session::get("message_type")) }}
+                                </h4>
+                                &nbsp;&nbsp;
+                                <div class="alert-text">{!!Session::get('message')!!}</div>
+                                <div class="alert-close">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true"><i class="la la-close"></i></span>
+                                    </button>
+                                </div>
+                            </div>
+                        @endif
+
                         @yield('content')
                         </div>
                     </div>

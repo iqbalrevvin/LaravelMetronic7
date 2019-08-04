@@ -62,7 +62,7 @@
             </div>
             <div class="kt-portlet__head-toolbar">
                 <div class="kt-portlet__head-actions">
-                    <a title='Add Field Setting' class='btn btn-sm btn-primary' href='{{route("SettingsControllerGetAdd")."?group_setting=".$page_title}}'>
+                    <a title='Add Field Setting' class='btn btn-sm btn-primary nav_block' href='{{route("SettingsControllerGetAdd")."?group_setting=".$page_title}}'>
                 <i class='fa fa-plus'></i> Add Field Setting
             </a>
                 </div>
@@ -169,7 +169,7 @@
                     </div><!-- /.box-body -->
                     <div class="box-footer">
                         <div class='pull-right'>
-                            <input type='submit' name='submit' value='Save' class='btn btn-success btn-elevate btn-pill btn-elevate-air btn-sm'/>
+                            <input type='submit' name='submit' value='Save' class='btn btn-success btn-elevate btn-pill btn-elevate-air btn-sm nav_block'/>
                         </div>
                     </div><!-- /.box-footer-->
                 </form>
